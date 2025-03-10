@@ -1,6 +1,6 @@
 {
   "name": "astro-fontawesome",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "FontAwesome integration for Astro",
   "type": "module",
   "exports": {
