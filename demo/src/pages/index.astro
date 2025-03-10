@@ -1,5 +1,7 @@
 ---
-
+import { FontAwesomeIcon, FontAwesomeLayer } from 'astro-fontawesome'
+import { faCircle, faMap, faStar } from '@fortawesome/free-regular-svg-icons'
+import '../fontawesome'
 ---
 
 <html lang="en">
@@ -8,9 +10,43 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>astro-fontawesome</title>
   </head>
   <body>
-    <h1>Astro</h1>
+    <h1>astro-fontawesome</h1>
+    <FontAwesomeIcon icon={faStar} class="star-class" />
+    <FontAwesomeLayer
+      icons={[
+        { icon: faCircle, class: 'circle-class' },
+        { icon: faMap, class: 'map-class' }
+      ]}
+      class="layer-class"
+    />
   </body>
 </html>
+
+<style>
+  .star-class {
+    color: red;
+    height: 100px;
+    width: 100px;
+  }
+
+  .map-class {
+    color: pink;
+    height: 120px;
+    width: 120px;
+  }
+
+  .circle-class {
+    color: green;
+    height: 120px;
+    width: 120px;
+  }
+
+  .layer-class {
+    background-color: blue;
+    height: 120px;
+    width: 120px;
+  }
+</style>
